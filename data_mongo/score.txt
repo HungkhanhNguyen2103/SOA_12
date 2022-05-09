@@ -1,0 +1,32 @@
+[
+    {
+      "code": "KTTK-CN",
+      "point": 6.7,
+	"studentId" : "B18CN284",
+      "subjectId": "KTTK-04",
+    },
+    {
+      "code": "HDT-CN",
+      "point": 7.2,
+	"studentId" : "B18CN284",
+      "subjectId": "HDT-04",
+    },
+    {
+      "code": "DBCL-CN",
+      "point": 7.5,
+	"studentId" : "B18CN284",
+      "subjectId": "DBCL-04",
+    },
+    {
+      "code": "TBDD-CN",
+      "point": 6.9,
+	"studentId" : "B18CN284",
+      "subjectId": "TBDD-04",
+    },
+	{
+      "code": "TBDD-CN",
+      "point": 6.8,
+	"studentId" : "B18CN200",
+      "subjectId": "TBDD-04",
+    }
+  ]
