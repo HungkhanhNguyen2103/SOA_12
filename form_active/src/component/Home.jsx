@@ -5,9 +5,9 @@ import swal from 'sweetalert'
 
 export default function Home(){
 
-  const API_SUCCESS_MAIL = 'http://localhost:8006/email_success/'
+  const API_SUCCESS_MAIL = 'https://confirm-email-1.herokuapp.com/email_success/'
   
-  const API_MAIL = 'http://localhost:8001/send_email'
+  const API_MAIL = "https://send-email-1.herokuapp.com/send_email"
 
   const word = window.location.href.split('?jwt=')
   const token = word[1]
@@ -24,7 +24,8 @@ export default function Home(){
     const render = async () => {
       
     if(token !== undefined) {     
-        return await axios.get(API_SUCCESS_MAIL + token)
+      // console.log(word);
+        return  await axios.get(API_SUCCESS_MAIL + token)
         // console.log(res);
       }   
     }
@@ -69,8 +70,10 @@ export default function Home(){
                 method : 'POST',
                 data : update,
               })
-              // document.cookie = `jwt_user=${res.data.accessToken}; expires= `
-              window.location.href = '/#/email_confirm/'
+              document.cookie = `jwt_user=${res.data.accessToken}; expires= `
+              // window.location.replace("https://hungkhanhnguyen2103.github.io/form_active/#/email_confirm/") 
+              window.location.href = "/form_active/#/email_confirm"
+              
             }
             render()
           } 
@@ -79,8 +82,10 @@ export default function Home(){
       else return swal(res.data.message);
     }    
     else setTimeout(() => {
-        // document.cookie = `jwt_user=${res.data.accessToken}; expires= `
-        window.location.href = '/#/email_confirm/'
+        document.cookie = `jwt_user=${res.data.accessToken}; expires= `
+        // window.location.replace("https://hungkhanhnguyen2103.github.io/form_active/#/email_confirm/") 
+        window.location.href = "/form_active/#/email_confirm"
+        
     }, 100);
     
     // else 
